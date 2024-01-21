@@ -1,0 +1,60 @@
+---
+import GridDotsSVG from '../assets/svg/grid-dots.svg?raw'
+import GridDots2SVG from '../assets/svg/grid-dots-2.svg?raw'
+---
+
+<footer class="relative">
+  <div class="absolute right-20 top-0 -translate-y-2/3">
+    <Fragment set:html={GridDotsSVG} />
+  </div>
+  <section class="relative overflow-hidden px-8 py-28 text-white">
+    <div class="absolute -bottom-5 -left-5">
+      <Fragment set:html={GridDots2SVG} />
+    </div>
+    <div class="container relative mx-auto grid grid-cols-12 gap-5">
+      <div class="col-span-4">
+        <a href="#" class="mb-4 flex items-center gap-2 text-2xl font-bold">
+          <span
+            class="h-10 w-10 rounded-full bg-white text-center leading-10 text-primary"
+            >T</span
+          >
+          <span>Trafalgar</span>
+        </a>
+        <p class="mb-8 text-lg font-light">
+          Trafalgar provides progressive, and affordable healthcare, accessible
+          on mobile and online for everyone
+        </p>
+        <p class="text-lg font-light">
+          &copy;Trafalgar PTY LTD 2020. All rights reserved
+        </p>
+      </div>
+      <ul class="col-span-2 col-start-7 flex flex-col gap-4">
+        <li class="mb-2 text-xl font-bold">Company</li>
+        <li><a href="#" class="text-lg font-light">About</a></li>
+        <li><a href="#" class="text-lg font-light">Testimonials</a></li>
+        <li><a href="#" class="text-lg font-light">Find a doctor</a></li>
+        <li><a href="#" class="text-lg font-light">Apps</a></li>
+      </ul>
+      <ul class="col-span-2 flex flex-col gap-4">
+        <li class="mb-2 text-xl font-bold">Region</li>
+        <li><a href="#" class="text-lg font-light">Indonesia</a></li>
+        <li><a href="#" class="text-lg font-light">Singapore</a></li>
+        <li><a href="#" class="text-lg font-light">Hongkong</a></li>
+        <li><a href="#" class="text-lg font-light">Canada</a></li>
+      </ul>
+      <ul class="col-span-2 flex flex-col gap-4">
+        <li class="mb-2 text-xl font-bold">Help</li>
+        <li><a href="#" class="text-lg font-light">Help center</a></li>
+        <li><a href="#" class="text-lg font-light">Contact support</a></li>
+        <li><a href="#" class="text-lg font-light">Instructions</a></li>
+        <li><a href="#" class="text-lg font-light">How it works</a></li>
+      </ul>
+    </div>
+  </section>
+</footer>
+
+<style>
+  section {
+    background: linear-gradient(183deg, #67c3f3 -8.57%, #5a98f2 82.96%);
+  }
+</style>

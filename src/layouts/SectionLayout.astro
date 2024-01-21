@@ -1,0 +1,9 @@
+---
+type Props = astroHTML.JSX.HTMLAttributes
+
+const { props } = Astro
+---
+
+<section class:list={['my-52 px-8', props.class]} {...props}>
+  <slot />
+</section>

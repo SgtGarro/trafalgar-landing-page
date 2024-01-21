@@ -1,0 +1,32 @@
+---
+import NavLink from './NavLink.astro'
+---
+
+<header class="px-8">
+  <nav class="container mx-auto flex h-28 items-center justify-between">
+    <a href="#" class="flex items-center gap-2 text-2xl font-bold">
+      <span
+        class="h- 10 w-10 rounded-full bg-primary text-center leading-10 text-white"
+        >T</span
+      >
+      <span class="text-[#233348]">Trafalgar</span>
+    </a>
+    <ul class="flex gap-10">
+      <li>
+        <NavLink to="#">Home</NavLink>
+      </li>
+      <li>
+        <NavLink to="#">Find a doctor</NavLink>
+      </li>
+      <li>
+        <NavLink to="#">Apps</NavLink>
+      </li>
+      <li>
+        <NavLink to="#">Testimonials</NavLink>
+      </li>
+      <li>
+        <NavLink to="#">About us</NavLink>
+      </li>
+    </ul>
+  </nav>
+</header>

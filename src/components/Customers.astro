@@ -1,0 +1,58 @@
+---
+import SectionLayout from '../layouts/SectionLayout.astro'
+import CustomerImg from '../assets/images/customer-1.png'
+import GridDotsSVG from '../assets/svg/grid-dots.svg?raw'
+import GridDots2SVG from '../assets/svg/grid-dots-2.svg?raw'
+import { Image } from 'astro:assets'
+---
+
+<SectionLayout>
+  <div class="container relative mx-auto 2xl:grid 2xl:grid-cols-12">
+    <div class="absolute bottom-8 translate-x-1/2">
+      <Fragment set:html={GridDotsSVG} />
+    </div>
+    <div class="card relative">
+      <div class="absolute -right-12 -top-4">
+        <Fragment set:html={GridDots2SVG} />
+      </div>
+      <h2 class="mb-6 text-center text-4xl font-bold leading-tight">
+        What our customer are saying
+      </h2>
+      <div class="mx-auto mb-8 h-[2px] w-14 bg-white"></div>
+      <div class="flex items-center gap-28">
+        <div class="flex-none">
+          <div class="flex items-center gap-7">
+            <div class="w-32 xl:w-40">
+              <Image
+                width={128}
+                height={128}
+                src={CustomerImg}
+                alt="Edward Newgate"
+                quality={50}
+              />
+            </div>
+            <div>
+              <h4 class="mb-2 text-2xl font-bold xl:text-3xl">
+                Edward Newgate
+              </h4>
+              <p class="text-lg opacity-85 xl:text-xl">Founder Circle</p>
+            </div>
+          </div>
+        </div>
+
+        <blockquote class="w-full text-xl leading-normal opacity-95">
+          "Our dedicated patient engagement app and web portal allow you to
+          access information instantaneously (no tedeous form, long calls, or
+          administrative hassle) and securely"
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</SectionLayout>
+
+<style>
+  .card {
+    background: linear-gradient(208deg, #67c3f3 9.05%, #5a98f2 76.74%);
+    @apply col-start-2 col-end-12 overflow-hidden rounded-3xl px-28 pb-20 pt-16 text-white;
+  }
+</style>

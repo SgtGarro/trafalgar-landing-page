@@ -1,0 +1,32 @@
+---
+import { Image } from 'astro:assets'
+import HeroImg from '../assets/images/hero-illustration.png'
+import SectionLayout from '../layouts/SectionLayout.astro'
+import Button from './Button.astro'
+import GridDotsSVG from '../assets/svg/grid-dots.svg?raw'
+---
+
+<SectionLayout class="relative !my-20">
+  <div class="absolute left-0 -translate-x-[calc(50%-16px)]">
+    <Fragment set:html={GridDotsSVG} />
+  </div>
+  <div
+    class="container relative mx-auto grid grid-cols-[5fr_7fr] items-center gap-28"
+  >
+    <div class="max-w-md xl:max-w-2xl">
+      <h1 class="mb-6 text-5xl font-bold leading-tight text-secondary">
+        Virtual healthcare <br />
+        for you
+      </h1>
+      <p class="mb-12 text-xl leading-normal text-tertiary">
+        Trafalgar provides progressive, and affordable healthcare, accessible on
+        mobile and online for everyone
+      </p>
+      <Button>Consult today</Button>
+    </div>
+
+    <div class="w-full">
+      <Image src={HeroImg} alt="Hero illustration" format="avif" />
+    </div>
+  </div>
+</SectionLayout>

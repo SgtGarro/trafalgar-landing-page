@@ -1,0 +1,12 @@
+---
+type Props = astroHTML.JSX.HTMLAttributes
+
+const props = Astro.props
+---
+
+<div class="w-full overflow-hidden rounded-xl bg-white shadow-xl">
+  <slot name="header" />
+  <div {...props}>
+    <slot />
+  </div>
+</div>

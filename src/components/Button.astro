@@ -1,0 +1,23 @@
+---
+interface Props extends astroHTML.JSX.ButtonHTMLAttributes {
+  typeBtn?: 'primary' | 'secondary'
+}
+const { props } = Astro
+const { typeBtn } = props
+---
+
+<button
+  type="button"
+  class="min-w-52 rounded-full px-10 py-4 text-lg font-bold"
+  class:list={[
+    { 'bg-primary text-white': !typeBtn || typeBtn === 'primary' },
+    {
+      'text-primary shadow-[0_0_0_1.4px] shadow-primary':
+        typeBtn === 'secondary',
+    },
+    props.class,
+  ]}
+  {...props}
+>
+  <slot />
+</button>

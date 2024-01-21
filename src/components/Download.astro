@@ -1,0 +1,40 @@
+---
+import SectionLayout from '../layouts/SectionLayout.astro'
+import Button from './Button.astro'
+import DownloadImg from '../assets/images/download-illustration.png'
+import { Image } from 'astro:assets'
+---
+
+<SectionLayout>
+  <div
+    class="container mx-auto flex items-center justify-between gap-28 xl:grid xl:grid-cols-[6fr_7fr]"
+  >
+    <div class="ml-auto max-w-[25rem] xl:max-w-lg">
+      <h2 class="mb-6 text-3xl font-bold leading-normal text-secondary">
+        Download our <br />
+        mobile apps
+      </h2>
+      <div class="mb-8 h-[2px] w-14 bg-secondary"></div>
+      <p class="mb-9 text-lg font-light text-tertiary xl:leading-loose">
+        Our dedicated patient engagement app and web portal allow you to access
+        information instantaneously (no tedeous form, long calls, or
+        administrative hassle) and securely
+      </p>
+      <Button
+        typeBtn="secondary"
+        class="flex items-center justify-center gap-4"
+      >
+        <span>Download</span>
+        <!-- prettier-ignore -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="16" viewBox="0 0 11 16" fill="none">
+          <path d="M4.81951 1.05554L4.81951 12.6308L2.27646 10.0877C1.92569 9.73698 1.39954 9.73698 1.04878 10.0877C0.698014 10.4385 0.698014 10.9647 1.04878 11.3154L5.08258 15.3492C5.43335 15.7 5.95949 15.7 6.31026 15.3492L10.3441 11.3154C10.6948 10.9647 10.6948 10.4385 10.3441 10.0877C9.9933 9.73698 9.46715 9.73698 9.11638 10.0877L6.57333 12.6308L6.57333 1.05554C6.57333 0.617083 6.22257 0.178627 5.69642 0.178627C5.17027 0.178627 4.81951 0.617083 4.81951 1.05554Z" fill="#458FF6"/>
+        </svg>
+      </Button>
+    </div>
+    <div
+      class="max-h-[30rem] w-full max-w-[40rem] xl:max-h-[33.75rem] xl:max-w-full"
+    >
+      <Image src={DownloadImg} alt="Download Illustration" format="webp" />
+    </div>
+  </div>
+</SectionLayout>

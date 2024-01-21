@@ -1,0 +1,31 @@
+---
+import SectionLayout from '../layouts/SectionLayout.astro'
+import ProvidersImg from '../assets/images/hero-illustration.png'
+import Button from './Button.astro'
+import { Image } from 'astro:assets'
+---
+
+<SectionLayout>
+  <div
+    class="container mx-auto flex items-center justify-between gap-28 xl:grid xl:grid-cols-[7fr_6fr]"
+  >
+    <div
+      class="max-h-[30rem] w-full max-w-[40rem] xl:max-h-[33.75rem] xl:max-w-full"
+    >
+      <Image src={ProvidersImg} alt="Providers Illustration" format="avif" />
+    </div>
+    <div class="max-w-[25rem] xl:max-w-lg">
+      <h2 class="text-secondary mb-6 text-3xl font-bold leading-normal">
+        Leading healthcare <br />
+        providers
+      </h2>
+      <div class="bg-secondary mb-8 h-[2px] w-14"></div>
+      <p class="text-tertiary mb-9 text-lg font-light xl:leading-loose">
+        Trafalgar provides progressive, and affordable healthcare, accessible on
+        mobile and online for everyone. To us, it's not just work. We take pride
+        in the solutions we deliver
+      </p>
+      <Button typeBtn="secondary">Learn more</Button>
+    </div>
+  </div>
+</SectionLayout>

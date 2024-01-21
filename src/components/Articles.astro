@@ -1,0 +1,105 @@
+---
+import { Image } from 'astro:assets'
+import SectionLayout from '../layouts/SectionLayout.astro'
+import Card from './Card.astro'
+import DiseaseImg from '../assets/images/article-img-1.png'
+import LaboratoryImg from '../assets/images/article-img-2.png'
+import HealthCareImg from '../assets/images/article-img-3.png'
+import Button from './Button.astro'
+import BgSVGIllustration from '../assets/svg/bg-illustration.svg?raw'
+
+const arrowIcon = `
+  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="9" viewBox="0 0 15 9" fill="none">
+    <g clip-path="url(#clip0_63_2691)">
+      <path d="M0.803597 5.30357L11.4107 5.30357L9.08038 7.63393C8.75895 7.95536 8.75895 8.4375 9.08038 8.75893C9.40181 9.08036 9.88395 9.08036 10.2054 8.75893L13.9018 5.0625C14.2232 4.74107 14.2232 4.25893 13.9018 3.9375L10.2054 0.241071C9.88396 -0.0803579 9.40181 -0.080358 9.08038 0.241071C8.75896 0.5625 8.75896 1.04464 9.08038 1.36607L11.4107 3.69643L0.803597 3.69643C0.401811 3.69643 2.52311e-05 4.01786 2.51889e-05 4.5C2.51468e-05 4.98214 0.401811 5.30357 0.803597 5.30357Z" fill="#4089ED"/>
+    </g>
+    <defs>
+      <clipPath id="clip0_63_2691">
+        <rect width="14.1429" height="9" fill="white" transform="translate(14.1429 9) rotate(-180)"/>
+      </clipPath>
+    </defs>
+  </svg>`
+---
+
+<SectionLayout class="relative">
+  <div class="absolute -right-[15%] top-12">
+    <Fragment set:html={BgSVGIllustration} />
+  </div>
+  <div class="container relative mx-auto">
+    <h2 class="mb-6 text-center text-4xl font-bold text-secondary">
+      Check out our latest article
+    </h2>
+    <div class="mx-auto mb-8 h-[2px] w-14 bg-secondary"></div>
+    <div
+      class="mx-auto mb-20 grid max-w-screen-lg grid-cols-12 gap-9 *:col-span-4"
+    >
+      <Card class="px-8 pb-9 pt-5">
+        <Image
+          src={DiseaseImg}
+          alt="Doctor with a patient"
+          slot="header"
+          class="h-48 object-cover"
+        />
+        <h4 class="mb-3 text-xl font-bold leading-normal">
+          Disease detection, check up in the laboratory
+        </h4>
+        <p class="mb-6 font-light leading-[1.75] text-tertiary">
+          In this case, the role of the health laboratory is very important to
+          do a disease detection...
+        </p>
+        <a
+          href="#"
+          class="flex items-center gap-3 text-lg font-semibold text-primary"
+        >
+          <span>Read more</span>
+          <Fragment set:html={arrowIcon} />
+        </a>
+      </Card>
+      <Card class="px-8 pb-9 pt-5">
+        <Image
+          src={LaboratoryImg}
+          alt="A scientist at the laboratory"
+          slot="header"
+          class="h-48 object-cover"
+        />
+        <h4 class="mb-3 text-xl font-bold leading-normal">
+          Disease detection, check up in the laboratory
+        </h4>
+        <p class="mb-6 font-light leading-[1.75] text-tertiary">
+          In this case, the role of the health laboratory is very important to
+          do a disease detection...
+        </p>
+        <a
+          href="#"
+          class="flex items-center gap-3 text-lg font-semibold text-primary"
+        >
+          <span>Read more</span>
+          <Fragment set:html={arrowIcon} />
+        </a>
+      </Card>
+      <Card class="px-8 pb-9 pt-5">
+        <Image
+          src={HealthCareImg}
+          alt="A woman getting a skincare"
+          slot="header"
+          class="h-48 object-cover"
+        />
+        <h4 class="mb-3 text-xl font-bold leading-normal">
+          Disease detection, check up in the laboratory
+        </h4>
+        <p class="mb-6 font-light leading-[1.75] text-tertiary">
+          In this case, the role of the health laboratory is very important to
+          do a disease detection...
+        </p>
+        <a
+          href="#"
+          class="flex items-center gap-3 text-lg font-semibold text-primary"
+        >
+          <span>Read more</span>
+          <Fragment set:html={arrowIcon} />
+        </a>
+      </Card>
+    </div>
+    <Button class="mx-auto block" typeBtn="secondary">View all</Button>
+  </div>
+</SectionLayout>

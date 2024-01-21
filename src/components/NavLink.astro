@@ -1,0 +1,16 @@
+---
+interface Props {
+  to: string
+}
+
+const { to } = Astro.props
+---
+
+<a
+  href={to}
+  class="text-quaternary opacity-50 transition-opacity hover:opacity-100"
+>
+  <slot />
+</a>
+
+<style></style>

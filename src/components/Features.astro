@@ -1,0 +1,102 @@
+---
+import SectionLayout from '../layouts/SectionLayout.astro'
+import Card from './Card.astro'
+import SearchDoctorIcon from '../assets/svg/search-doctor.svg?raw'
+import PillsIcon from '../assets/svg/pills.svg?raw'
+import PhoneIcon from '../assets/svg/phone.svg?raw'
+import MedkitIcon from '../assets/svg/medkit.svg?raw'
+import MedicalReportIcon from '../assets/svg/medical-report.svg?raw'
+import DetailsIcon from '../assets/svg/details.svg?raw'
+import Button from './Button.astro'
+import BgSVGIllustration from '../assets/svg/bg-illustration.svg?raw'
+import GridDotsSVG from '../assets/svg/grid-dots.svg?raw'
+---
+
+<SectionLayout id="features" class="relative">
+  <div class="absolute -left-[10%] top-40 rotate-180">
+    <Fragment set:html={BgSVGIllustration} />
+  </div>
+  <div class="container relative mx-auto">
+    <h2 class="mb-8 text-center text-4xl font-bold">Our services</h2>
+    <div class="mx-auto mb-8 h-[2px] w-14 bg-secondary"></div>
+    <div class="mb-20 grid grid-cols-12 gap-5">
+      <p
+        class="col-start-2 col-end-12 text-center text-lg font-light text-tertiary"
+      >
+        We provide to you the best choiches for you. Adjust it to your health
+        needs and make sure your undergo treatment with our highly qualified
+        doctors you can consult with us which type of service is suitable for
+        your health
+      </p>
+    </div>
+    <div
+      class="relative mx-auto mb-16 grid max-w-screen-lg grid-cols-12 gap-10 *:relative *:col-span-4"
+    >
+      <div
+        class="!absolute right-0 top-1/2 -translate-y-[calc(50%+28px)] translate-x-1/2"
+      >
+        <Fragment set:html={GridDotsSVG} />
+      </div>
+      <Card class="px-10 pb-12 pt-14">
+        <div class="flex h-24 flex-col justify-end">
+          <Fragment set:html={SearchDoctorIcon} />
+        </div>
+        <h3 class="mt-5 text-2xl font-bold">Search doctor</h3>
+        <p class="mt-2 leading-relaxed text-tertiary">
+          Choose your doctor from thousands of specialist, general, and trusted
+          hospitals
+        </p>
+      </Card>
+      <Card class="px-10 pb-12 pt-14">
+        <div class="flex h-24 flex-col justify-end">
+          <Fragment set:html={PillsIcon} />
+        </div>
+        <h3 class="mt-5 text-2xl font-bold">Online pharmacy</h3>
+        <p class="mt-2 leading-relaxed text-tertiary">
+          Buy your medicines with our mobile application with a simple delivery
+          system
+        </p>
+      </Card>
+      <Card class="px-10 pb-12 pt-14">
+        <div class="flex h-24 flex-col justify-end">
+          <Fragment set:html={PhoneIcon} />
+        </div>
+        <h3 class="mt-5 text-2xl font-bold">Consultation</h3>
+        <p class="mt-2 leading-relaxed text-tertiary">
+          Free consultation with our trusted doctors and get the best
+          recomendations
+        </p>
+      </Card>
+      <Card class="px-10 pb-12 pt-14">
+        <div class="flex h-24 flex-col justify-end">
+          <Fragment set:html={DetailsIcon} />
+        </div>
+        <h3 class="mt-5 text-2xl font-bold">Details info</h3>
+        <p class="mt-2 leading-relaxed text-tertiary">
+          Free consultation with our trusted doctors and get the best
+          recomendations
+        </p>
+      </Card>
+      <Card class="px-10 pb-12 pt-14">
+        <div class="flex h-24 flex-col justify-end">
+          <Fragment set:html={MedkitIcon} />
+        </div>
+        <h3 class="mt-5 text-2xl font-bold">Emergency care</h3>
+        <p class="mt-2 leading-relaxed text-tertiary">
+          You can get 24/7 urgent care for yourself or your children and your
+          lovely family
+        </p>
+      </Card>
+      <Card class="px-10 pb-12 pt-14">
+        <div class="flex h-24 flex-col justify-end">
+          <Fragment set:html={MedicalReportIcon} />
+        </div>
+        <h3 class="mt-5 text-2xl font-bold">Tracking</h3>
+        <p class="mt-2 leading-relaxed text-tertiary">
+          Track and save your medical history and health data
+        </p>
+      </Card>
+    </div>
+    <Button typeBtn="secondary" class="mx-auto block">Learn more</Button>
+  </div>
+</SectionLayout>
